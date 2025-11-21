@@ -33,7 +33,7 @@ function printItems3(n: number) {
     }
   }
 }
-console.log("Quadratic", printItems3(4));
+// console.log("Quadratic", printItems3(4));
 
 // Non dominant term
 function printItems4(n: number) {
@@ -53,4 +53,27 @@ function printItems4(n: number) {
   // result: O(n2 + n) = O(n2)
 }
 
-console.log("Non dominant term", printItems4(4));
+// console.log("Non dominant term", printItems4(4));
+
+// Different term input - Add vs Multiply
+// multiply: if your algorithm is in the form "do this for each time you do that" then you multiply the runtime
+function printItems5(a: number, b: number) {
+  // O(a * b)
+  for (let i = 0; i < a; i++) {
+    for (let j = 0; j < b; j++) {
+      console.log("i", i);
+      console.log("j", j);
+    }
+  }
+}
+
+// add: if your algorithm is in the form "do this, the when you are all done, do that" then you add the runtime
+function printItems6(a: number, b: number) {
+  // O(a + b)
+  for (let i = 0; i < a; i++) {
+    console.log(i);
+  }
+  for (let j = 0; j < b; j++) {
+    console.log(j);
+  }
+}
