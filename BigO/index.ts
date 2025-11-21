@@ -34,3 +34,23 @@ function printItems3(n: number) {
   }
 }
 console.log("Quadratic", printItems3(4));
+
+// Non dominant term
+function printItems4(n: number) {
+  // O(n2)
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      console.log("i", i);
+      console.log("j", j);
+    }
+  }
+
+  // O(n)
+  for (let k = 0; k < n; k++) {
+    console.log("k", k);
+  }
+
+  // result: O(n2 + n) = O(n2)
+}
+
+console.log("Non dominant term", printItems4(4));
