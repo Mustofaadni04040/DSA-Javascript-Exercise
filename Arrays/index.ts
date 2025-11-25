@@ -62,11 +62,22 @@ const find = arr6.find((item) => item === target); // if not found, it'll return
 // console.log(find);
 const find2 = arr6.find((item, index) => {
   if (item > 5) {
-    console.log(`The element was found at index ${index}`);
+    // console.log(`The element was found at index ${index}`);
     return true;
   } else {
-    console.log(`The element was not found`);
+    // console.log(`The element was not found`);
     return false;
   }
 });
-console.log(find2);
+// console.log(find2);
+
+// delete in array
+const arr7 = [1, 2, 3, 4, 5, 6, 7];
+// arr7.splice(2, 1, 10); //time complexity: O(n) | space complexity: O(1)
+// arr7.pop(); //time complexity: O(1) | space complexity: O(1)
+// arr7.shift(); // time complexity: O(n) | space complexity: O(1) | because it has to shift all elements to the left
+delete arr7[2];
+// console.log(arr7);
+
+const filter = arr7.filter((item) => item > 5); // time complexity: O(n) | space complexity: O(n)
+console.log(filter);
