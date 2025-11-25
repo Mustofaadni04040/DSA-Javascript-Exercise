@@ -77,3 +77,43 @@ function printItems6(a: number, b: number) {
     console.log(j);
   }
 }
+
+// space complexity
+function sum(n: number): number {
+  if (n <= 0) {
+    return 0;
+  }
+
+  return n + sum(n - 1);
+}
+
+// console.log(sum(3));
+
+function pairSumSequence(n: number): number {
+  var total = 0;
+  for (let i = 0; i < n; i++) {
+    total += pairSum(i, i + 1);
+  }
+  return total;
+}
+
+function pairSum(a: number, b: number): number {
+  return a + b;
+}
+
+// console.log(pairSumSequence(3));
+
+function findTotalNumber(n: number): number {
+  let total = 0;
+  for (let i = 0; i <= n; i++) {
+    total += i;
+  }
+
+  if (total > 100) {
+    console.log("The total number is greater than 100");
+  }
+
+  return total;
+}
+
+console.log(findTotalNumber(5));
