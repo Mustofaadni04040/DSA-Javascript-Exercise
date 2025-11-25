@@ -14,4 +14,20 @@ arr3.push(6);
 arr3.unshift(0); // time complexity: O(n) | space complexity: O(1)
 arr3.splice(2, 0, 9); // time complexity: O(n) | space complexity: O(1)
 
-console.log(arr3);
+// console.log(arr3);
+
+// Accessing array elements and array traversal
+const arr4: number[] = [1, 2, 3, 4, 5];
+
+let value = arr4[3];
+// console.log(value);
+
+for (let i = 0; i < arr4.length; i++) {
+  console.log(arr4[i]); // time complexity: O(n) | space complexity: O(1)
+}
+for (const item of arr4) {
+  console.log(item);
+}
+arr4.forEach((item) => {
+  console.log(item);
+});
