@@ -77,7 +77,7 @@ const arr7 = [1, 2, 3, 4, 5, 6, 7];
 // arr7.pop(); //time complexity: O(1) | space complexity: O(1)
 // arr7.shift(); // time complexity: O(n) | space complexity: O(1) | because it has to shift all elements to the left
 delete arr7[2];
-// console.log(arr7);
+// console.log(arr7[2]);
 
 const filter = arr7.filter((item) => item > 5); // time complexity: O(n) | space complexity: O(n)
-console.log(filter);
+// console.log(filter);
