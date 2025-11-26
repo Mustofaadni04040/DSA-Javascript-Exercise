@@ -41,3 +41,29 @@ function modifyArray(arr: number[], index: number, value: number) {
 }
 
 console.log(modifyArray([10, 20, 30], 1, 15));
+
+// fin min and max
+function findMinMax(arr: any[]): { min: number; max: number } {
+  let min: number = 0;
+  let max: number = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < arr[0]) {
+      min = arr[i];
+    }
+    if (arr[i] > arr[0]) {
+      max = arr[i];
+    }
+  }
+
+  return { min, max };
+}
+
+function findMinMax2(arr: any[]): { min: number; max: number } {
+  let min: number = Math.min(...arr);
+  let max: number = Math.max(...arr);
+
+  return { min, max };
+}
+
+console.log(findMinMax([3, 5, 7, 2, 8]));
