@@ -29,3 +29,15 @@ function reverseArray2(n: number[]) {
 }
 
 console.log(reverseArray2([1, 2, 3, 4]));
+
+// modified array
+function modifyArray(arr: number[], index: number, value: number) {
+  if (index >= 0 && index > arr.length) {
+    arr.push(value);
+  } else {
+    arr.splice(index, 0, value);
+  }
+  return arr;
+}
+
+console.log(modifyArray([10, 20, 30], 1, 15));
