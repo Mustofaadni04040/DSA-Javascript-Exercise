@@ -43,23 +43,23 @@ function modifyArray(arr: number[], index: number, value: number) {
 console.log(modifyArray([10, 20, 30], 1, 15));
 
 // fin min and max
-function findMinMax(arr: any[]): { min: number; max: number } {
+function findMinMax(arr: number[]): { min: number; max: number } {
   let min: number = 0;
   let max: number = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < arr[0]) {
-      min = arr[i];
+    if (arr[i]! < arr[0]!) {
+      min = arr[i] ?? 0;
     }
-    if (arr[i] > arr[0]) {
-      max = arr[i];
+    if (arr[i]! > arr[0]!) {
+      max = arr[i] ?? 0;
     }
   }
 
   return { min, max };
 }
 
-function findMinMax2(arr: any[]): { min: number; max: number } {
+function findMinMax2(arr: number[]): { min: number; max: number } {
   let min: number = Math.min(...arr);
   let max: number = Math.max(...arr);
 
@@ -67,3 +67,20 @@ function findMinMax2(arr: any[]): { min: number; max: number } {
 }
 
 console.log(findMinMax([3, 5, 7, 2, 8]));
+
+// sum of array
+function sumArray(arr: number[]): number {
+  let sum: number = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]!;
+  }
+
+  return sum;
+}
+
+function sumArra2(arr: number[]): number {
+  return arr.reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(sumArray([5, 10, 15]));
